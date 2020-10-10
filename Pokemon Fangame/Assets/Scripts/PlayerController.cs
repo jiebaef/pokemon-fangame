@@ -2,13 +2,17 @@
 
 public class PlayerController : MonoBehaviour
 {
+    private string Horizontal = "Horizontal", Vertical = "Vertical";
+
     public float MovementSpeed = 3f;
 
     public Rigidbody2D RigidBody;
     public Animator Animator;
     public Transform FuturePosition;
 
-    Vector2 movement;
+    private Vector2 movement;
+    private bool IsMoving;
+
 
     private void Start()
     {
@@ -28,14 +32,19 @@ public class PlayerController : MonoBehaviour
 
     void ProcessInputs()
     {
-        var horizontal = "Horizontal";
-        var vertical = "Vertical";
+        movement.x = Input.GetAxisRaw(Horizontal);
+        movement.y = Input.GetAxisRaw(Vertical);
 
-        movement.x = Input.GetAxisRaw(horizontal);
-        movement.y = Input.GetAxisRaw(vertical);
+        if (!IsMoving)
+        {
+            AnimateCharacter();
+        }
+    }
 
-        Animator.SetFloat(horizontal, movement.x);
-        Animator.SetFloat(vertical, movement.y);
+    void AnimateCharacter()
+    {
+        Animator.SetFloat(Horizontal, movement.x);
+        Animator.SetFloat(Vertical, movement.y);
         Animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
@@ -48,9 +57,18 @@ public class PlayerController : MonoBehaviour
     {
         RigidBody.position = Vector3.MoveTowards(transform.position, FuturePosition.position, MovementSpeed * Time.fixedDeltaTime);
 
-        if (Vector3.Distance(transform.position, FuturePosition.position) <= 0.75f)
+        IsMoving = true;
+
+        var distance = Vector3.Distance(transform.position, FuturePosition.position);
+
+        if (distance <= 0.75f)
         {
-            FuturePosition.position = RigidBody.transform.position;
+            if (distance == 0f)
+            {
+                FuturePosition.position = RigidBody.transform.position;
+                IsMoving = false;
+            }
+
             if (Mathf.Abs(movement.x) == 1f)
             {
                 FuturePosition.position += new Vector3(movement.x, 0f, 0f);
