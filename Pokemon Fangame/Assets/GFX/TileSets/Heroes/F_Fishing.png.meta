@@ -1,0 +1,538 @@
+fileFormatVersion: 2
+guid: 6a310c3cdc923724fb156068d899f50a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2836656079804813882
+    second: F_Fishing_0
+  - first:
+      213: -3369828695977641692
+    second: F_Fishing_1
+  - first:
+      213: 6503451774741216210
+    second: F_Fishing_2
+  - first:
+      213: -3945170008435032209
+    second: F_Fishing_3
+  - first:
+      213: -4406297422062925854
+    second: F_Fishing_4
+  - first:
+      213: 1919383705125750546
+    second: F_Fishing_5
+  - first:
+      213: -6713853048210675300
+    second: F_Fishing_6
+  - first:
+      213: 5121876951120845100
+    second: F_Fishing_7
+  - first:
+      213: 8322787217789341201
+    second: F_Fishing_8
+  - first:
+      213: -228997213714692402
+    second: F_Fishing_9
+  - first:
+      213: 2296409722868283156
+    second: F_Fishing_10
+  - first:
+      213: 6011583487351084000
+    second: F_Fishing_11
+  - first:
+      213: 4373451378991954948
+    second: F_Fishing_12
+  - first:
+      213: -3094100470157222958
+    second: F_Fishing_13
+  - first:
+      213: 5064578118020833917
+    second: F_Fishing_14
+  - first:
+      213: 2554283471583652628
+    second: F_Fishing_15
+  - first:
+      213: -741673049981635693
+    second: F_Fishing_16
+  - first:
+      213: 5322417951053346772
+    second: F_Fishing_17
+  - first:
+      213: 6029547134021691883
+    second: F_Fishing_18
+  - first:
+      213: 483574569143324004
+    second: F_Fishing_19
+  - first:
+      213: 7635537551659854163
+    second: F_Fishing_20
+  - first:
+      213: 4701863900301804973
+    second: F_Fishing_21
+  - first:
+      213: 7231340829052058211
+    second: F_Fishing_22
+  - first:
+      213: 5636436797498019152
+    second: F_Fishing_23
+  - first:
+      213: -3698417068581142674
+    second: F_Fishing_24
+  - first:
+      213: -3517959041035840672
+    second: F_Fishing_25
+  - first:
+      213: 3998714722315813374
+    second: F_Fishing_26
+  - first:
+      213: -7816641856685966904
+    second: F_Fishing_27
+  - first:
+      213: 6933007740737211561
+    second: F_Fishing_28
+  - first:
+      213: -5246594294068802298
+    second: F_Fishing_29
+  - first:
+      213: -8908912579647397746
+    second: F_Fishing_30
+  - first:
+      213: 559284989906201884
+    second: F_Fishing_31
+  - first:
+      213: 1233593299444578895
+    second: F_Fishing_32
+  - first:
+      213: -1733102820562317493
+    second: F_Fishing_33
+  - first:
+      213: -8654770904129181419
+    second: F_Fishing_34
+  - first:
+      213: -8832263250734375363
+    second: F_Fishing_35
+  - first:
+      213: -3376001442732895307
+    second: F_Fishing_36
+  - first:
+      213: 1114383358129725157
+    second: F_Fishing_37
+  - first:
+      213: -6867995037984939725
+    second: F_Fishing_38
+  - first:
+      213: -47914367671634774
+    second: F_Fishing_39
+  - first:
+      213: 6496899533931158798
+    second: F_Fishing_40
+  - first:
+      213: 2184177072439337270
+    second: F_Fishing_41
+  - first:
+      213: 4659255241460750273
+    second: F_Fishing_42
+  - first:
+      213: 3951398815238404087
+    second: F_Fishing_43
+  - first:
+      213: 7448771450202285014
+    second: F_Fishing_44
+  - first:
+      213: 8392708843605414533
+    second: F_Fishing_45
+  - first:
+      213: 1084562416754913661
+    second: F_Fishing_46
+  - first:
+      213: 877909051894166858
+    second: F_Fishing_47
+  - first:
+      213: -1995422380915327293
+    second: F_Fishing_0
+  - first:
+      213: -7771326937072399961
+    second: F_Fishing_1
+  - first:
+      213: 6061224061497645516
+    second: F_Fishing_2
+  - first:
+      213: 3566161010743273842
+    second: F_Fishing_3
+  - first:
+      213: -2302325826106641389
+    second: F_Fishing_4
+  - first:
+      213: 3151394595224046529
+    second: F_Fishing_5
+  - first:
+      213: 5557137400035269833
+    second: F_Fishing_6
+  - first:
+      213: -6484363239043555015
+    second: F_Fishing_7
+  - first:
+      213: -3102441009979779886
+    second: F_Fishing_8
+  - first:
+      213: 2528478883285512177
+    second: F_Fishing_9
+  - first:
+      213: 910643006000440471
+    second: F_Fishing_10
+  - first:
+      213: -480394398988115177
+    second: F_Fishing_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: F_Fishing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce7da0bae5de44e0800000000000000
+      internalID: -1995422380915327293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a900623353b62490800000000000000
+      internalID: -7771326937072399961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc91e919b2bcd1450800000000000000
+      internalID: 6061224061497645516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27963318b8c8d7130800000000000000
+      internalID: 3566161010743273842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314b4b10cde7c00e0800000000000000
+      internalID: -2302325826106641389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb4a6300b00cbb20800000000000000
+      internalID: 3151394595224046529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccd329b50bee1d40800000000000000
+      internalID: 5557137400035269833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931253e5df9e206a0800000000000000
+      internalID: -6484363239043555015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d41d8fb65ae1f4d0800000000000000
+      internalID: -3102441009979779886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff2f4cd526f61320800000000000000
+      internalID: 2528478883285512177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794a9d93df043ac00800000000000000
+      internalID: 910643006000440471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Fishing_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713e930e6db4559f0800000000000000
+      internalID: -480394398988115177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
