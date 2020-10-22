@@ -1,67 +1,76 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.AnimationManagement.AnimationNames;
+using Assets.Scripts.AnimationManagement.Animations;
+using Assets.Scripts.Enums;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private string Horizontal = "Horizontal", Vertical = "Vertical";
+    private readonly string Horizontal = "Horizontal", Vertical = "Vertical";
 
-    public float MovementSpeed = 3f;
+    #pragma warning disable 0649
+    [SerializeField]
+    private Animator Animator;
+    [SerializeField]
+    private Rigidbody2D RigidBody;
+    [SerializeField]
+    private Transform FuturePosition;
+    #pragma warning restore 0649
 
-    public Rigidbody2D RigidBody;
-    public Animator Animator;
-    public Transform FuturePosition;
+    [SerializeField]
+    private CharacterDirection CharacterFacingDirection = CharacterDirection.DOWN;
+    [SerializeField]
+    private float MovementSpeed = 3f;
 
-    private Vector2 movement;
     private bool IsMoving;
-
+    private float DistanceToFuturePosition;
+    private PlayerAnimationManager PlayerAnimationManager;
+    private Vector3 PreviousPlayerPosition, PlayerMovementDirection;
+    private Vector2 Movement;
 
     private void Start()
     {
         FuturePosition.parent = null;
+
+        PlayerAnimationManager = new PlayerAnimationManager(
+            new PlayerAnimation(Animator), 
+            new PlayerMovementAnimationHandler(Gender.MALE, MoveState.IDLING)
+        );
     }
 
     void Update()
     {
         ProcessInputs();
+
+        DetermineCharacterFacingDirection(FuturePosition.position);
+
+        PlayerAnimationManager.AnimateCharacter(IsMoving, MoveState.WALKING, CharacterFacingDirection);
     }
 
     private void FixedUpdate()
     {
-        //Move();
         GridMove();
+
+        DistanceToFuturePosition = Vector3.Distance(transform.position, FuturePosition.position);
+
+        CheckIfCharacterIsMoving();
+
+        DetermineFuturePosition(DistanceToFuturePosition);
     }
 
     void ProcessInputs()
     {
-        movement.x = Input.GetAxisRaw(Horizontal);
-        movement.y = Input.GetAxisRaw(Vertical);
-
-        if (!IsMoving)
-        {
-            AnimateCharacter();
-        }
-    }
-
-    void AnimateCharacter()
-    {
-        Animator.SetFloat(Horizontal, movement.x);
-        Animator.SetFloat(Vertical, movement.y);
-        Animator.SetFloat("Speed", movement.sqrMagnitude);
-    }
-
-    void Move()
-    {
-        RigidBody.MovePosition(RigidBody.position + movement * MovementSpeed * Time.fixedDeltaTime);
+        Movement.x = Input.GetAxisRaw(Horizontal);
+        Movement.y = Input.GetAxisRaw(Vertical);
     }
 
     void GridMove()
     {
         RigidBody.position = Vector3.MoveTowards(transform.position, FuturePosition.position, MovementSpeed * Time.fixedDeltaTime);
+    }
 
-        IsMoving = true;
-
-        var distance = Vector3.Distance(transform.position, FuturePosition.position);
-
-        if (distance <= 0.75f)
+    void DetermineFuturePosition(float distance)
+    {
+        if (distance <= 0.15f)
         {
             if (distance == 0f)
             {
@@ -69,15 +78,36 @@ public class PlayerController : MonoBehaviour
                 IsMoving = false;
             }
 
-            if (Mathf.Abs(movement.x) == 1f)
+            if (Mathf.Abs(Movement.x) == 1f)
             {
-                FuturePosition.position += new Vector3(movement.x, 0f, 0f);
+                FuturePosition.position += new Vector3(Movement.x, 0f, 0f);
             }
-            else if (Mathf.Abs(movement.y) == 1f)
+            else if (Mathf.Abs(Movement.y) == 1f)
             {
-                FuturePosition.position += new Vector3(0f, movement.y, 0f);
+                FuturePosition.position += new Vector3(0f, Movement.y, 0f);
             }
         }
-
     }
+
+    void DetermineCharacterFacingDirection(Vector3 futurePlayerPosition)
+    {
+        PlayerMovementDirection = (futurePlayerPosition - PreviousPlayerPosition).normalized;
+        PreviousPlayerPosition = futurePlayerPosition;
+
+        if (PlayerMovementDirection.x > 0)
+            CharacterFacingDirection = CharacterDirection.RIGHT;
+        else if (PlayerMovementDirection.x < 0)
+            CharacterFacingDirection = CharacterDirection.LEFT;
+        else if (PlayerMovementDirection.y > 0)
+            CharacterFacingDirection = CharacterDirection.UP;
+        else if (PlayerMovementDirection.y < 0)
+            CharacterFacingDirection = CharacterDirection.DOWN;
+    }
+
+    void CheckIfCharacterIsMoving()
+    {
+        if (DistanceToFuturePosition > 0f)
+            IsMoving = true;
+    }
+
 }

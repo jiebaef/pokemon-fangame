@@ -269,9 +269,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 3
-  RigidBody: {fileID: 1378244809}
-  Animator: {fileID: 1378244812}
-  FuturePosition: {fileID: 1212844868}
+  RigidBody: {fileID: 0}
+  Animator: {fileID: 0}
+  FuturePosition: {fileID: 0}
+  LastFacingDirectionPreviousSession: 1
+  CharacterFacingDirection: 0
 --- !u!50 &1378244809
 Rigidbody2D:
   serializedVersion: 4
