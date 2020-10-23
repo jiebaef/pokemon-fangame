@@ -1,49 +1,73 @@
 ﻿using Assets.Scripts.AnimationManagement.AnimationNames;
 using Assets.Scripts.AnimationManagement.Animations;
 using Assets.Scripts.Enums;
+using Assets.Scripts.TilemapHandling;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
     private readonly string Horizontal = "Horizontal", Vertical = "Vertical";
 
-    #pragma warning disable 0649
+#pragma warning disable 0649
     [SerializeField]
     private Animator Animator;
+
     [SerializeField]
     private Rigidbody2D RigidBody;
+
     [SerializeField]
     private Transform FuturePosition;
-    #pragma warning restore 0649
+
+    [SerializeField]
+    private Tilemap GroundTilemap;
+
+    [SerializeField]
+    private Tilemap EnvironmentTilemap;
+
+#pragma warning restore 0649
 
     [SerializeField]
     private CharacterDirection CharacterFacingDirection = CharacterDirection.DOWN;
+
     [SerializeField]
     private float MovementSpeed = 3f;
 
-    private bool IsMoving;
-    private float DistanceToFuturePosition;
     private PlayerAnimationManager PlayerAnimationManager;
+
+    private TilemapHandler TilemapHandler;
+
     private Vector3 PreviousPlayerPosition, PlayerMovementDirection;
+
     private Vector2 Movement;
+
+    private bool IsMoving;
+
+    private float DistanceToFuturePosition;
 
     private void Start()
     {
         FuturePosition.parent = null;
 
         PlayerAnimationManager = new PlayerAnimationManager(
-            new PlayerAnimation(Animator), 
+            new PlayerAnimation(Animator),
             new PlayerMovementAnimationHandler(Gender.MALE, MoveState.IDLING)
         );
+
+        TilemapHandler = new TilemapHandler(GroundTilemap, EnvironmentTilemap);
     }
 
     void Update()
     {
         ProcessInputs();
 
-        DetermineCharacterFacingDirection(FuturePosition.position);
+        if (CanPlayerMove())
+        {
+            DetermineCharacterFacingDirection(FuturePosition.position);
 
-        PlayerAnimationManager.AnimateCharacter(IsMoving, MoveState.WALKING, CharacterFacingDirection);
+            PlayerAnimationManager.AnimateCharacter(IsMoving, MoveState.WALKING, CharacterFacingDirection);
+        }
+
     }
 
     private void FixedUpdate()
@@ -65,7 +89,8 @@ public class PlayerController : MonoBehaviour
 
     void GridMove()
     {
-        RigidBody.position = Vector3.MoveTowards(transform.position, FuturePosition.position, MovementSpeed * Time.fixedDeltaTime);
+        if (CanPlayerMove())
+            RigidBody.position = Vector3.MoveTowards(transform.position, FuturePosition.position, MovementSpeed * Time.fixedDeltaTime);
     }
 
     void DetermineFuturePosition(float distance)
@@ -110,4 +135,5 @@ public class PlayerController : MonoBehaviour
             IsMoving = true;
     }
 
+    bool CanPlayerMove() => TilemapHandler.CanMove(FuturePosition.position);
 }
